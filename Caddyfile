@@ -1,0 +1,5 @@
+localhost:8080 {
+  root * /srv/course
+  file_server
+  encode gzip
+}

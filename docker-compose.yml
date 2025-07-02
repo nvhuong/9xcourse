@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  9xcourse-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: 9xcourse-website
+    
+  # Optional: Add nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "3080:80"
+      - "3443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - 9xcourse-website
+    restart: unless-stopped
+    container_name: 9xcourse-nginx

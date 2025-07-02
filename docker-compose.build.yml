@@ -1,0 +1,22 @@
+services:
+  frontend-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile.build
+    image: nextjs-static-export
+    container_name: frontend-builder
+    volumes:
+      - export_course:/export/course
+
+  export-copier:
+    image: alpine:latest
+    container_name: export-copier
+    depends_on:
+      - frontend-builder
+    entrypoint: sh -c "rm -rf /host/course && mkdir -p /host/course && cp -r /export/course/* /host/course/"
+    volumes:
+      - export_course:/export/course:ro
+      - ./out:/host
+
+volumes:
+  export_course:
