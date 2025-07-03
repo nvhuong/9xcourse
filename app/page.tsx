@@ -2162,7 +2162,7 @@ export default function HomePage() {
                 {selectedCourse.packages.advance.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className={index === 3 ? "font-semibold text-blue-600" : ""}>{benefit}</span>
+                    <span className={index === 2 || index === 3 ? "font-semibold text-blue-600" : ""}>{benefit}</span>
                   </div>
                 ))}
                 <div className="flex gap-2 mt-6">
