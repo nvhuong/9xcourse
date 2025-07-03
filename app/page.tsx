@@ -1989,14 +1989,14 @@ export default function HomePage() {
               Ưu điểm
             </button>
             <button
-              onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+              onClick={() => window.open("https://m.me/9xlab", "_blank")}
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               Liên hệ
             </button>
           </nav>
           <Button
-            onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+            onClick={() => window.open("https://m.me/9xlab", "_blank")}
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
           >
             Đăng ký ngay
@@ -2026,7 +2026,7 @@ export default function HomePage() {
             >
               Khám phá khóa học
             </Button>
-            <Button size="lg" variant="outline" onClick={() => window.open("https://m.me/9xcourse", "_blank")}>
+            <Button size="lg" variant="outline" onClick={() => window.open("https://m.me/9xlab", "_blank")}>
               Tư vấn miễn phí
             </Button>
           </div>
@@ -2135,7 +2135,7 @@ export default function HomePage() {
                   </Button>
                   <Button
                     className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                    onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+                    onClick={() => window.open("https://m.me/9xlab", "_blank")}
                   >
                     Đăng ký ngay
                   </Button>
@@ -2175,7 +2175,7 @@ export default function HomePage() {
                   </Button>
                   <Button
                     className="flex-1 bg-blue-600 hover:bg-blue-700"
-                    onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+                    onClick={() => window.open("https://m.me/9xlab", "_blank")}
                   >
                     Đăng ký ngay
                   </Button>
@@ -2213,7 +2213,7 @@ export default function HomePage() {
                   </Button>
                   <Button
                     className="flex-1 bg-purple-600 hover:bg-purple-700"
-                    onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+                    onClick={() => window.open("https://m.me/9xlab", "_blank")}
                   >
                     Đăng ký ngay
                   </Button>
@@ -2454,7 +2454,7 @@ export default function HomePage() {
             <Button
               size="lg"
               className="mt-8 bg-white text-orange-600 hover:bg-gray-100 font-semibold"
-              onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+              onClick={() => window.open("https://m.me/9xlab", "_blank")}
             >
               Đăng ký nhóm ngay
             </Button>
@@ -2471,7 +2471,7 @@ export default function HomePage() {
             <Button
               size="lg"
               className="bg-white text-blue-600 hover:bg-gray-100"
-              onClick={() => window.open("https://m.me/9xcourse", "_blank")}
+              onClick={() => window.open("https://m.me/9xlab", "_blank")}
             >
               Đăng ký tư vấn miễn phí
             </Button>
@@ -2506,8 +2506,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">Gọi ngay để được tư vấn</p>
-                <a href="tel:0123456789" className="text-blue-600 font-semibold hover:underline">
-                  0123 456 789
+                <a href="tel:0964210295" className="text-blue-600 font-semibold hover:underline">
+                  0964 210 295
                 </a>
               </CardContent>
             </Card>
@@ -2521,7 +2521,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">Chat trực tiếp qua Zalo</p>
-                <a href="https://zalo.me/0123456789" className="text-green-600 font-semibold hover:underline">
+                <a href="https://zalo.me/0964210295" className="text-green-600 font-semibold hover:underline">
                   Chat ngay
                 </a>
               </CardContent>
@@ -2536,7 +2536,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">Theo dõi fanpage</p>
-                <a href="https://facebook.com/9xcourse" className="text-blue-800 font-semibold hover:underline">
+                <a href="https://facebook.com/9xlab" className="text-blue-800 font-semibold hover:underline">
                   Nhắn tin
                 </a>
               </CardContent>
@@ -2575,9 +2575,9 @@ export default function HomePage() {
               <h3 className="font-semibold mb-4">Liên hệ</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>📧 info@9xcourse.com</li>
-                <li>📱 0123 456 789</li>
+                <li>📱 0964 210 295</li>
                 <li>💬 Facebook Messenger</li>
-                <li>📍 TP. Hồ Chí Minh</li>
+                <li>📍 174 Phương Canh, Hà Nội</li>
               </ul>
             </div>
           </div>
@@ -2591,7 +2591,7 @@ export default function HomePage() {
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
         <a
-          href="tel:0123456789"
+          href="tel:0964210295"
           className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
           title="Gọi điện"
         >
@@ -2599,7 +2599,7 @@ export default function HomePage() {
         </a>
 
         <a
-          href="https://zalo.me/0123456789"
+          href="https://zalo.me/0964210295"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
@@ -2609,7 +2609,7 @@ export default function HomePage() {
         </a>
 
         <a
-          href="https://facebook.com/9xcourse"
+          href="https://facebook.com/9xlab"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-blue-800 hover:bg-blue-900 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
@@ -2650,7 +2650,7 @@ export default function HomePage() {
                   className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                   onClick={() => {
                     closeVideoDemo()
-                    window.open("https://m.me/9xcourse", "_blank")
+                    window.open("https://m.me/9xlab", "_blank")
                   }}
                 >
                   Đăng ký ngay
@@ -2756,7 +2756,7 @@ export default function HomePage() {
                   className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                   onClick={() => {
                     closeCurriculum()
-                    window.open("https://m.me/9xcourse", "_blank")
+                    window.open("https://m.me/9xlab", "_blank")
                   }}
                 >
                   Đăng ký ngay
@@ -2766,7 +2766,7 @@ export default function HomePage() {
                   className="flex-1 bg-transparent"
                   onClick={() => {
                     closeCurriculum()
-                    window.open("https://m.me/9xcourse", "_blank")
+                    window.open("https://m.me/9xlab", "_blank")
                   }}
                 >
                   Tư vấn miễn phí
