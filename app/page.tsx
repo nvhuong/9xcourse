@@ -2297,12 +2297,12 @@ export default function HomePage() {
                 </div>
               </div>
               <CardHeader className="text-center pt-8">
-                <div className="text-4xl font-bold text-blue-600 mb-2">500.000đ</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">300.000đ</div>
                 <CardTitle className="text-xl">Người được giới thiệu đầu tiên</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  Nhận ngay 500.000đ khi người bạn giới thiệu đăng ký và hoàn thành thanh toán khóa học bất kỳ
+                  Nhận ngay 300.000đ khi người bạn giới thiệu đăng ký và hoàn thành thanh toán khóa học bất kỳ
                 </p>
               </CardContent>
             </Card>
@@ -2314,12 +2314,12 @@ export default function HomePage() {
                 </div>
               </div>
               <CardHeader className="text-center pt-8">
-                <div className="text-4xl font-bold text-purple-600 mb-2">750.000đ</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">500.000đ</div>
                 <CardTitle className="text-xl">Người được giới thiệu thứ 2</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  Tăng lên 750.000đ cho mỗi người được giới thiệu thứ 2 trở đi. Thưởng cao hơn cho sự nỗ lực!
+                  Tăng lên 500.000đ cho mỗi người được giới thiệu thứ 2 trở đi. Thưởng cao hơn cho sự nỗ lực!
                 </p>
               </CardContent>
             </Card>
@@ -2385,14 +2385,14 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
                   <Badge className="bg-orange-100 text-orange-800">Nhóm 3-5 người</Badge>
-                  <div className="text-2xl font-bold text-orange-600">-15%</div>
+                  <div className="text-2xl font-bold text-orange-600">-10%</div>
                 </div>
                 <CardTitle className="text-2xl">Ưu đãi nhóm nhỏ</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span>Giảm 15% học phí cho mỗi thành viên</span>
+                  <span>Giảm 10% học phí cho mỗi thành viên</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
@@ -2416,14 +2416,14 @@ export default function HomePage() {
               <CardHeader className="pt-8">
                 <div className="flex items-center justify-between mb-4">
                   <Badge className="bg-red-100 text-red-800">Nhóm 6+ người</Badge>
-                  <div className="text-3xl font-bold text-red-600">-25%</div>
+                  <div className="text-3xl font-bold text-red-600">-20%</div>
                 </div>
                 <CardTitle className="text-2xl">Ưu đãi nhóm lớn</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold">Giảm 25% học phí cho mỗi thành viên</span>
+                  <span className="font-semibold">Giảm 20% học phí cho mỗi thành viên</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600" />
