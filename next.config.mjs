@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', //'standalone',
+  // output: 'export', //'caddy',
+  output: 'standalone', //'nginx',
   eslint: {
     ignoreDuringBuilds: true,
   },

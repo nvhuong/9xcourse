@@ -26,6 +26,7 @@ export default function HomePage() {
   const [showCurriculum, setShowCurriculum] = useState(false)
   const [selectedCourseForCurriculum, setSelectedCourseForCurriculum] = useState(null)
   const [showVideoDemo, setShowVideoDemo] = useState(false)
+  const [selectedPackage, setSelectedPackage] = useState("mini")
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
@@ -39,38 +40,6 @@ export default function HomePage() {
       icon: Database,
       color: "from-red-500 to-orange-500",
       featured: true,
-      curriculum: [
-        {
-          day: 1,
-          title: "Java Core & Spring Boot Setup",
-          topics: ["Java OOP basics", "Spring Boot project setup", "Dependency Injection", "First REST API"],
-        },
-        {
-          day: 2,
-          title: "Database & JPA Integration",
-          topics: ["MySQL setup", "JPA/Hibernate", "Entity mapping", "Repository pattern"],
-        },
-        {
-          day: 3,
-          title: "REST API Development",
-          topics: ["CRUD operations", "Request/Response handling", "Validation", "Error handling"],
-        },
-        {
-          day: 4,
-          title: "Authentication & Security",
-          topics: ["Spring Security", "JWT implementation", "Login/Register API", "Authorization"],
-        },
-        {
-          day: 5,
-          title: "E-commerce API Project",
-          topics: ["Product management", "User management", "Order processing", "Payment integration"],
-        },
-        {
-          day: 6,
-          title: "Testing & Deployment",
-          topics: ["Unit testing", "Integration testing", "Docker deployment", "Production setup"],
-        },
-      ],
       packages: {
         mini: {
           price: "2.990.000",
@@ -80,8 +49,40 @@ export default function HomePage() {
           benefits: [
             "6 buổi học thực chiến qua Zoom",
             "Xây dựng 1 REST API hoàn chỉnh",
-            "Mentor 1:1 hỗ trợ project",
             "Tài liệu Java/Spring Boot thực tế",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Java Core & Spring Boot Setup",
+              topics: ["Java OOP basics", "Spring Boot project setup", "Dependency Injection", "First REST API"],
+            },
+            {
+              day: 2,
+              title: "Database & JPA Integration",
+              topics: ["MySQL setup", "JPA/Hibernate", "Entity mapping", "Repository pattern"],
+            },
+            {
+              day: 3,
+              title: "REST API Development",
+              topics: ["CRUD operations", "Request/Response handling", "Validation", "Error handling"],
+            },
+            {
+              day: 4,
+              title: "Authentication & Security",
+              topics: ["Spring Security", "JWT implementation", "Login/Register API", "Authorization"],
+            },
+            {
+              day: 5,
+              title: "E-commerce API Project",
+              topics: ["Product management", "User management", "Order processing", "Payment integration"],
+            },
+            {
+              day: 6,
+              title: "Testing & Deployment",
+              topics: ["Unit testing", "Integration testing", "Docker deployment", "Production setup"],
+            },
           ],
         },
         advance: {
@@ -92,8 +93,95 @@ export default function HomePage() {
           benefits: [
             "15 buổi học chuyên sâu qua Zoom",
             "Microservices & Spring Cloud",
-            "Mentor 1:1 từ Senior Java Developer",
-            "Cam kết thực tập tại công ty fintech",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
+            "Cơ hội thực tập tại công ty công nghệ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Java Core & Spring Boot Mastery",
+              topics: [
+                "Advanced Java concepts",
+                "Spring Boot deep dive",
+                "Configuration management",
+                "Profiles & Properties",
+              ],
+            },
+            {
+              day: 2,
+              title: "Database Design & Advanced JPA",
+              topics: [
+                "Database design principles",
+                "Advanced JPA features",
+                "Query optimization",
+                "Transaction management",
+              ],
+            },
+            {
+              day: 3,
+              title: "REST API Best Practices",
+              topics: ["RESTful design principles", "API versioning", "Documentation with Swagger", "Rate limiting"],
+            },
+            {
+              day: 4,
+              title: "Security & Authentication",
+              topics: ["Spring Security advanced", "OAuth2 & JWT", "Role-based access", "Security best practices"],
+            },
+            {
+              day: 5,
+              title: "Microservices Architecture",
+              topics: ["Microservices patterns", "Service discovery", "API Gateway", "Inter-service communication"],
+            },
+            {
+              day: 6,
+              title: "Spring Cloud Ecosystem",
+              topics: ["Spring Cloud Config", "Circuit breaker", "Load balancing", "Distributed tracing"],
+            },
+            {
+              day: 7,
+              title: "Message Queues & Events",
+              topics: ["RabbitMQ/Kafka", "Event-driven architecture", "Async processing", "Message patterns"],
+            },
+            {
+              day: 8,
+              title: "Caching & Performance",
+              topics: ["Redis integration", "Caching strategies", "Performance optimization", "Monitoring"],
+            },
+            {
+              day: 9,
+              title: "Testing Strategies",
+              topics: ["Unit testing advanced", "Integration testing", "Contract testing", "Test automation"],
+            },
+            {
+              day: 10,
+              title: "DevOps & CI/CD",
+              topics: ["Docker containerization", "Kubernetes basics", "CI/CD pipelines", "Deployment strategies"],
+            },
+            {
+              day: 11,
+              title: "Monitoring & Logging",
+              topics: ["Application monitoring", "Centralized logging", "Health checks", "Alerting"],
+            },
+            {
+              day: 12,
+              title: "E-commerce Platform - Part 1",
+              topics: ["System design", "User service", "Product catalog", "Inventory management"],
+            },
+            {
+              day: 13,
+              title: "E-commerce Platform - Part 2",
+              topics: ["Order processing", "Payment integration", "Notification service", "Search functionality"],
+            },
+            {
+              day: 14,
+              title: "Performance & Scalability",
+              topics: ["Load testing", "Database optimization", "Horizontal scaling", "CDN integration"],
+            },
+            {
+              day: 15,
+              title: "Production Deployment",
+              topics: ["Production checklist", "Environment setup", "Monitoring setup", "Go-live strategy"],
+            },
           ],
         },
         combo: {
@@ -105,7 +193,140 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "System Design & Architecture",
             "Code review chuyên nghiệp",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 2.510.000đ",
+          ],
+          curriculum: [
+            // Weeks 1-2: Foundation (Mini content)
+            {
+              day: 1,
+              title: "Java Fundamentals & Spring Boot",
+              topics: ["Java OOP mastery", "Spring Boot setup", "Dependency Injection", "Configuration management"],
+            },
+            {
+              day: 2,
+              title: "Database Design & JPA",
+              topics: ["Database design", "JPA/Hibernate advanced", "Entity relationships", "Query optimization"],
+            },
+            {
+              day: 3,
+              title: "REST API Development",
+              topics: ["RESTful principles", "CRUD operations", "Validation", "Error handling"],
+            },
+            {
+              day: 4,
+              title: "Security Implementation",
+              topics: ["Spring Security", "JWT authentication", "Authorization", "Security best practices"],
+            },
+            {
+              day: 5,
+              title: "Testing & Quality Assurance",
+              topics: ["Unit testing", "Integration testing", "Test-driven development", "Code quality"],
+            },
+            // Weeks 3-4: Advanced Backend
+            {
+              day: 6,
+              title: "Microservices Architecture",
+              topics: ["Microservices patterns", "Service decomposition", "API Gateway", "Service mesh"],
+            },
+            {
+              day: 7,
+              title: "Spring Cloud Ecosystem",
+              topics: ["Service discovery", "Configuration management", "Circuit breaker", "Load balancing"],
+            },
+            {
+              day: 8,
+              title: "Message Queues & Events",
+              topics: ["Apache Kafka", "RabbitMQ", "Event sourcing", "CQRS pattern"],
+            },
+            {
+              day: 9,
+              title: "Caching & Performance",
+              topics: ["Redis implementation", "Caching strategies", "Performance tuning", "Memory optimization"],
+            },
+            {
+              day: 10,
+              title: "Database Optimization",
+              topics: ["Query optimization", "Indexing strategies", "Database sharding", "Read replicas"],
+            },
+            // Weeks 5-6: System Design & Architecture
+            {
+              day: 11,
+              title: "System Design Principles",
+              topics: ["Scalability patterns", "High availability", "Fault tolerance", "CAP theorem"],
+            },
+            {
+              day: 12,
+              title: "Distributed Systems",
+              topics: ["Distributed computing", "Consensus algorithms", "Data consistency", "Eventual consistency"],
+            },
+            {
+              day: 13,
+              title: "Cloud Architecture",
+              topics: ["AWS/Azure services", "Serverless architecture", "Container orchestration", "Cloud patterns"],
+            },
+            {
+              day: 14,
+              title: "DevOps & Infrastructure",
+              topics: ["Infrastructure as Code", "Kubernetes advanced", "Monitoring", "Observability"],
+            },
+            {
+              day: 15,
+              title: "Security Architecture",
+              topics: ["Security by design", "Threat modeling", "Secure coding", "Compliance"],
+            },
+            // Weeks 7-8: Real-world Projects
+            {
+              day: 16,
+              title: "E-commerce System Design",
+              topics: ["System architecture", "Database design", "API design", "Scalability planning"],
+            },
+            {
+              day: 17,
+              title: "User Management Service",
+              topics: ["Authentication service", "User profiles", "Permission management", "Social login"],
+            },
+            {
+              day: 18,
+              title: "Product Catalog Service",
+              topics: ["Product management", "Search functionality", "Recommendation engine", "Inventory tracking"],
+            },
+            {
+              day: 19,
+              title: "Order Processing System",
+              topics: ["Order workflow", "Payment processing", "Inventory management", "Order tracking"],
+            },
+            {
+              day: 20,
+              title: "Notification & Communication",
+              topics: ["Email service", "SMS integration", "Push notifications", "Real-time messaging"],
+            },
+            // Week 9: Advanced Topics
+            {
+              day: 21,
+              title: "Machine Learning Integration",
+              topics: ["ML model integration", "Recommendation systems", "Data pipelines", "A/B testing"],
+            },
+            {
+              day: 22,
+              title: "Analytics & Reporting",
+              topics: ["Data collection", "Analytics dashboard", "Business intelligence", "Real-time metrics"],
+            },
+            {
+              day: 23,
+              title: "Mobile API Development",
+              topics: ["Mobile-first API", "Offline support", "Push notifications", "App versioning"],
+            },
+            {
+              day: 24,
+              title: "Performance & Monitoring",
+              topics: ["APM tools", "Performance profiling", "Capacity planning", "SLA management"],
+            },
+            {
+              day: 25,
+              title: "Production & Career Guidance",
+              topics: ["Production deployment", "Career roadmap", "Interview preparation", "Industry trends"],
+            },
           ],
         },
       },
@@ -117,48 +338,6 @@ export default function HomePage() {
       icon: Code,
       color: "from-purple-500 to-pink-500",
       featured: true,
-      curriculum: [
-        {
-          day: 1,
-          title: "Frontend Foundation",
-          topics: ["HTML5/CSS3 essentials", "JavaScript ES6+", "DOM manipulation", "Responsive design"],
-        },
-        {
-          day: 2,
-          title: "React Fundamentals",
-          topics: ["Components & JSX", "State & Props", "Event handling", "React Hooks"],
-        },
-        {
-          day: 3,
-          title: "Backend with Node.js",
-          topics: ["Express.js setup", "API routing", "Middleware", "Database connection"],
-        },
-        {
-          day: 4,
-          title: "Database & Authentication",
-          topics: ["MongoDB/MySQL", "User authentication", "JWT tokens", "Password hashing"],
-        },
-        {
-          day: 5,
-          title: "Frontend-Backend Integration",
-          topics: ["API calls", "State management", "Error handling", "Loading states"],
-        },
-        {
-          day: 6,
-          title: "Full Stack Project",
-          topics: ["Todo/Blog application", "CRUD operations", "User management", "Deployment"],
-        },
-        {
-          day: 7,
-          title: "Advanced Features",
-          topics: ["File upload", "Real-time features", "Performance optimization", "Testing"],
-        },
-        {
-          day: 8,
-          title: "Production Deployment",
-          topics: ["Heroku/Vercel deployment", "Environment variables", "Database hosting", "Domain setup"],
-        },
-      ],
       packages: {
         mini: {
           price: "3.490.000",
@@ -169,7 +348,48 @@ export default function HomePage() {
             "8 buổi học thực chiến qua Zoom",
             "Xây dựng 1 web app hoàn chỉnh",
             "Frontend React + Backend Node.js",
-            "Mentor 1:1 hỗ trợ project",
+            "Mentor 1:1 hỗ trợ bài tập lớn",          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Frontend Foundation",
+              topics: ["HTML5/CSS3 essentials", "JavaScript ES6+", "DOM manipulation", "Responsive design"],
+            },
+            {
+              day: 2,
+              title: "React Fundamentals",
+              topics: ["Components & JSX", "State & Props", "Event handling", "React Hooks"],
+            },
+            {
+              day: 3,
+              title: "Backend with Node.js",
+              topics: ["Express.js setup", "API routing", "Middleware", "Database connection"],
+            },
+            {
+              day: 4,
+              title: "Database & Authentication",
+              topics: ["MongoDB/MySQL", "User authentication", "JWT tokens", "Password hashing"],
+            },
+            {
+              day: 5,
+              title: "Frontend-Backend Integration",
+              topics: ["API calls", "State management", "Error handling", "Loading states"],
+            },
+            {
+              day: 6,
+              title: "Full Stack Project",
+              topics: ["Todo/Blog application", "CRUD operations", "User management", "Deployment"],
+            },
+            {
+              day: 7,
+              title: "Advanced Features",
+              topics: ["File upload", "Real-time features", "Performance optimization", "Testing"],
+            },
+            {
+              day: 8,
+              title: "Production Deployment",
+              topics: ["Heroku/Vercel deployment", "Environment variables", "Database hosting", "Domain setup"],
+            },
           ],
         },
         advance: {
@@ -179,9 +399,101 @@ export default function HomePage() {
           sessions: "18 buổi x 3h",
           benefits: [
             "18 buổi học chuyên sâu qua Zoom",
-            "Advanced React + Microservices",
-            "Mentor 1:1 từ Full Stack Lead",
-            "Cam kết thực tập tại startup công nghệ",
+            "Advanced React + Microservices",            
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
+            "Cơ hội thực tập tại công ty công nghệ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Frontend Foundation",
+              topics: ["HTML5/CSS3 essentials", "JavaScript ES6+", "DOM manipulation", "Responsive design"],
+            },
+            {
+              day: 2,
+              title: "React Fundamentals",
+              topics: ["Components & JSX", "State & Props", "Event handling", "React Hooks"],
+            },
+            {
+              day: 3,
+              title: "Backend with Node.js",
+              topics: ["Express.js setup", "API routing", "Middleware", "Database connection"],
+            },
+            {
+              day: 4,
+              title: "Database & Authentication",
+              topics: ["MongoDB/MySQL", "User authentication", "JWT tokens", "Password hashing"],
+            },
+            {
+              day: 5,
+              title: "Frontend-Backend Integration",
+              topics: ["API calls", "State management", "Error handling", "Loading states"],
+            },
+            {
+              day: 6,
+              title: "Full Stack Project",
+              topics: ["Todo/Blog application", "CRUD operations", "User management", "Deployment"],
+            },
+            {
+              day: 7,
+              title: "Advanced Features",
+              topics: ["File upload", "Real-time features", "Performance optimization", "Testing"],
+            },
+            {
+              day: 8,
+              title: "Production Deployment",
+              topics: ["Heroku/Vercel deployment", "Environment variables", "Database hosting", "Domain setup"],
+            },
+            {
+              day: 9,
+              title: "Advanced React",
+              topics: ["Next.js", "SSR", "SEO", "Performance"],
+            },
+            {
+              day: 10,
+              title: "Microservices",
+              topics: ["Architecture", "Communication", "Deployment"],
+            },
+            {
+              day: 11,
+              title: "Testing",
+              topics: ["Unit", "Integration", "E2E"],
+            },
+            {
+              day: 12,
+              title: "DevOps",
+              topics: ["CI/CD", "Docker", "Kubernetes"],
+            },
+            {
+              day: 13,
+              title: "Security",
+              topics: ["OWASP", "Authentication", "Authorization"],
+            },
+            {
+              day: 14,
+              title: "Performance Optimization",
+              topics: ["Profiling", "Caching", "Load Balancing"],
+            },
+            {
+              day: 15,
+              title: "Real-time Applications",
+              topics: ["WebSockets", "Server-Sent Events"],
+            },
+            {
+              day: 16,
+              title: "GraphQL",
+              topics: ["Schema", "Queries", "Mutations"],
+            },
+            {
+              day: 17,
+              title: "Serverless",
+              topics: ["Functions", "Databases"],
+            },
+            {
+              day: 18,
+              title: "Progressive Web Apps",
+              topics: ["Service Workers", "Manifest"],
+            },
           ],
         },
         combo: {
@@ -193,7 +505,150 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "DevOps & Deployment",
             "Portfolio 3 dự án thực tế",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 3.010.000đ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Frontend Foundation",
+              topics: ["HTML5/CSS3 essentials", "JavaScript ES6+", "DOM manipulation", "Responsive design"],
+            },
+            {
+              day: 2,
+              title: "React Fundamentals",
+              topics: ["Components & JSX", "State & Props", "Event handling", "React Hooks"],
+            },
+            {
+              day: 3,
+              title: "Backend with Node.js",
+              topics: ["Express.js setup", "API routing", "Middleware", "Database connection"],
+            },
+            {
+              day: 4,
+              title: "Database & Authentication",
+              topics: ["MongoDB/MySQL", "User authentication", "JWT tokens", "Password hashing"],
+            },
+            {
+              day: 5,
+              title: "Frontend-Backend Integration",
+              topics: ["API calls", "State management", "Error handling", "Loading states"],
+            },
+            {
+              day: 6,
+              title: "Full Stack Project",
+              topics: ["Todo/Blog application", "CRUD operations", "User management", "Deployment"],
+            },
+            {
+              day: 7,
+              title: "Advanced Features",
+              topics: ["File upload", "Real-time features", "Performance optimization", "Testing"],
+            },
+            {
+              day: 8,
+              title: "Production Deployment",
+              topics: ["Heroku/Vercel deployment", "Environment variables", "Database hosting", "Domain setup"],
+            },
+            {
+              day: 9,
+              title: "Advanced React",
+              topics: ["Next.js", "SSR", "SEO", "Performance"],
+            },
+            {
+              day: 10,
+              title: "Microservices",
+              topics: ["Architecture", "Communication", "Deployment"],
+            },
+            {
+              day: 11,
+              title: "Testing",
+              topics: ["Unit", "Integration", "E2E"],
+            },
+            {
+              day: 12,
+              title: "DevOps",
+              topics: ["CI/CD", "Docker", "Kubernetes"],
+            },
+            {
+              day: 13,
+              title: "Security",
+              topics: ["OWASP", "Authentication", "Authorization"],
+            },
+            {
+              day: 14,
+              title: "Performance Optimization",
+              topics: ["Profiling", "Caching", "Load Balancing"],
+            },
+            {
+              day: 15,
+              title: "Real-time Applications",
+              topics: ["WebSockets", "Server-Sent Events"],
+            },
+            {
+              day: 16,
+              title: "GraphQL",
+              topics: ["Schema", "Queries", "Mutations"],
+            },
+            {
+              day: 17,
+              title: "Serverless",
+              topics: ["Functions", "Databases"],
+            },
+            {
+              day: 18,
+              title: "Progressive Web Apps",
+              topics: ["Service Workers", "Manifest"],
+            },
+            {
+              day: 19,
+              title: "Project 1: E-commerce",
+              topics: ["Design", "Development", "Deployment"],
+            },
+            {
+              day: 20,
+              title: "Project 2: Social Media",
+              topics: ["Design", "Development", "Deployment"],
+            },
+            {
+              day: 21,
+              title: "Project 3: Blog",
+              topics: ["Design", "Development", "Deployment"],
+            },
+            {
+              day: 22,
+              title: "Portfolio Building",
+              topics: ["Showcasing Projects", "Resume Building"],
+            },
+            {
+              day: 23,
+              title: "Interview Preparation",
+              topics: ["Technical Questions", "Behavioral Questions"],
+            },
+            {
+              day: 24,
+              title: "Job Search Strategies",
+              topics: ["Networking", "Online Platforms"],
+            },
+            {
+              day: 25,
+              title: "Advanced DevOps",
+              topics: ["Terraform", "Ansible"],
+            },
+            {
+              day: 26,
+              title: "Advanced Security",
+              topics: ["Penetration Testing", "Vulnerability Scanning"],
+            },
+            {
+              day: 27,
+              title: "Advanced Performance",
+              topics: ["Load Testing", "Stress Testing"],
+            },
+            {
+              day: 28,
+              title: "Final Project Review",
+              topics: ["Feedback", "Improvements"],
+            },
           ],
         },
       },
@@ -205,48 +660,6 @@ export default function HomePage() {
       icon: Zap,
       color: "from-green-500 to-teal-500",
       hot: true,
-      curriculum: [
-        {
-          day: 1,
-          title: "Python & Data Science Setup",
-          topics: ["Python essentials", "NumPy/Pandas", "Data manipulation", "Jupyter notebook"],
-        },
-        {
-          day: 2,
-          title: "Machine Learning Basics",
-          topics: ["ML concepts", "Scikit-learn", "Linear regression", "Model evaluation"],
-        },
-        {
-          day: 3,
-          title: "Classification & Clustering",
-          topics: ["Logistic regression", "Decision trees", "K-means clustering", "Model comparison"],
-        },
-        {
-          day: 4,
-          title: "Deep Learning Introduction",
-          topics: ["Neural networks", "TensorFlow/Keras", "Model training", "Overfitting prevention"],
-        },
-        {
-          day: 5,
-          title: "Computer Vision Project",
-          topics: ["Image classification", "CNN basics", "Transfer learning", "Real-world dataset"],
-        },
-        {
-          day: 6,
-          title: "NLP & Text Analysis",
-          topics: ["Text preprocessing", "Sentiment analysis", "Word embeddings", "Text classification"],
-        },
-        {
-          day: 7,
-          title: "Model Deployment",
-          topics: ["Flask API", "Model serving", "Cloud deployment", "API testing"],
-        },
-        {
-          day: 8,
-          title: "Final ML Project",
-          topics: ["End-to-end project", "Data pipeline", "Model optimization", "Production deployment"],
-        },
-      ],
       packages: {
         mini: {
           price: "3.990.000",
@@ -257,7 +670,49 @@ export default function HomePage() {
             "8 buổi học thực chiến qua Zoom",
             "Xây dựng 1 ML model hoàn chỉnh",
             "Python, Pandas, Scikit-learn",
-            "Mentor 1:1 từ AI Engineer",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Python & Data Science Setup",
+              topics: ["Python essentials", "NumPy/Pandas", "Data manipulation", "Jupyter notebook"],
+            },
+            {
+              day: 2,
+              title: "Machine Learning Basics",
+              topics: ["ML concepts", "Scikit-learn", "Linear regression", "Model evaluation"],
+            },
+            {
+              day: 3,
+              title: "Classification & Clustering",
+              topics: ["Logistic regression", "Decision trees", "K-means clustering", "Model comparison"],
+            },
+            {
+              day: 4,
+              title: "Deep Learning Introduction",
+              topics: ["Neural networks", "TensorFlow/Keras", "Model training", "Overfitting prevention"],
+            },
+            {
+              day: 5,
+              title: "Computer Vision Project",
+              topics: ["Image classification", "CNN basics", "Transfer learning", "Real-world dataset"],
+            },
+            {
+              day: 6,
+              title: "NLP & Text Analysis",
+              topics: ["Text preprocessing", "Sentiment analysis", "Word embeddings", "Text classification"],
+            },
+            {
+              day: 7,
+              title: "Model Deployment",
+              topics: ["Flask API", "Model serving", "Cloud deployment", "API testing"],
+            },
+            {
+              day: 8,
+              title: "Final ML Project",
+              topics: ["End-to-end project", "Data pipeline", "Model optimization", "Production deployment"],
+            },
           ],
         },
         advance: {
@@ -268,8 +723,110 @@ export default function HomePage() {
           benefits: [
             "20 buổi học chuyên sâu qua Zoom",
             "Deep Learning, Computer Vision, NLP",
-            "Mentor 1:1 từ AI Specialist",
-            "Cam kết thực tập tại công ty AI/Tech",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
+            "Cam kết thực tập tại công ty công nghệ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Python & Data Science Setup",
+              topics: ["Python essentials", "NumPy/Pandas", "Data manipulation", "Jupyter notebook"],
+            },
+            {
+              day: 2,
+              title: "Machine Learning Basics",
+              topics: ["ML concepts", "Scikit-learn", "Linear regression", "Model evaluation"],
+            },
+            {
+              day: 3,
+              title: "Classification & Clustering",
+              topics: ["Logistic regression", "Decision trees", "K-means clustering", "Model comparison"],
+            },
+            {
+              day: 4,
+              title: "Deep Learning Introduction",
+              topics: ["Neural networks", "TensorFlow/Keras", "Model training", "Overfitting prevention"],
+            },
+            {
+              day: 5,
+              title: "Computer Vision Project",
+              topics: ["Image classification", "CNN basics", "Transfer learning", "Real-world dataset"],
+            },
+            {
+              day: 6,
+              title: "NLP & Text Analysis",
+              topics: ["Text preprocessing", "Sentiment analysis", "Word embeddings", "Text classification"],
+            },
+            {
+              day: 7,
+              title: "Model Deployment",
+              topics: ["Flask API", "Model serving", "Cloud deployment", "API testing"],
+            },
+            {
+              day: 8,
+              title: "Final ML Project",
+              topics: ["End-to-end project", "Data pipeline", "Model optimization", "Production deployment"],
+            },
+            {
+              day: 9,
+              title: "Advanced Deep Learning",
+              topics: ["CNNs", "RNNs", "LSTMs", "Transformers"],
+            },
+            {
+              day: 10,
+              title: "Generative Models",
+              topics: ["GANs", "VAEs"],
+            },
+            {
+              day: 11,
+              title: "Reinforcement Learning",
+              topics: ["Q-Learning", "SARSA", "Policy Gradients"],
+            },
+            {
+              day: 12,
+              title: "Advanced NLP",
+              topics: ["BERT", "GPT", "Transformer Models"],
+            },
+            {
+              day: 13,
+              title: "Time Series Analysis",
+              topics: ["ARIMA", "LSTM"],
+            },
+            {
+              day: 14,
+              title: "Anomaly Detection",
+              topics: ["Clustering", "Autoencoders"],
+            },
+            {
+              day: 15,
+              title: "Recommender Systems",
+              topics: ["Collaborative Filtering", "Content-Based Filtering"],
+            },
+            {
+              day: 16,
+              title: "Explainable AI",
+              topics: ["SHAP", "LIME"],
+            },
+            {
+              day: 17,
+              title: "Federated Learning",
+              topics: ["Privacy", "Security"],
+            },
+            {
+              day: 18,
+              title: "MLOps",
+              topics: ["CI/CD", "Model Monitoring"],
+            },
+            {
+              day: 19,
+              title: "Edge Computing",
+              topics: ["Deployment", "Optimization"],
+            },
+            {
+              day: 20,
+              title: "Final Project",
+              topics: ["End-to-End Project"],
+            },
           ],
         },
         combo: {
@@ -281,7 +838,160 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "MLOps & Model Deployment",
             "Research paper guidance",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 3.010.000đ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Python & Data Science Setup",
+              topics: ["Python essentials", "NumPy/Pandas", "Data manipulation", "Jupyter notebook"],
+            },
+            {
+              day: 2,
+              title: "Machine Learning Basics",
+              topics: ["ML concepts", "Scikit-learn", "Linear regression", "Model evaluation"],
+            },
+            {
+              day: 3,
+              title: "Classification & Clustering",
+              topics: ["Logistic regression", "Decision trees", "K-means clustering", "Model comparison"],
+            },
+            {
+              day: 4,
+              title: "Deep Learning Introduction",
+              topics: ["Neural networks", "TensorFlow/Keras", "Model training", "Overfitting prevention"],
+            },
+            {
+              day: 5,
+              title: "Computer Vision Project",
+              topics: ["Image classification", "CNN basics", "Transfer learning", "Real-world dataset"],
+            },
+            {
+              day: 6,
+              title: "NLP & Text Analysis",
+              topics: ["Text preprocessing", "Sentiment analysis", "Word embeddings", "Text classification"],
+            },
+            {
+              day: 7,
+              title: "Model Deployment",
+              topics: ["Flask API", "Model serving", "Cloud deployment", "API testing"],
+            },
+            {
+              day: 8,
+              title: "Final ML Project",
+              topics: ["End-to-end project", "Data pipeline", "Model optimization", "Production deployment"],
+            },
+            {
+              day: 9,
+              title: "Advanced Deep Learning",
+              topics: ["CNNs", "RNNs", "LSTMs", "Transformers"],
+            },
+            {
+              day: 10,
+              title: "Generative Models",
+              topics: ["GANs", "VAEs"],
+            },
+            {
+              day: 11,
+              title: "Reinforcement Learning",
+              topics: ["Q-Learning", "SARSA", "Policy Gradients"],
+            },
+            {
+              day: 12,
+              title: "Advanced NLP",
+              topics: ["BERT", "GPT", "Transformer Models"],
+            },
+            {
+              day: 13,
+              title: "Time Series Analysis",
+              topics: ["ARIMA", "LSTM"],
+            },
+            {
+              day: 14,
+              title: "Anomaly Detection",
+              topics: ["Clustering", "Autoencoders"],
+            },
+            {
+              day: 15,
+              title: "Recommender Systems",
+              topics: ["Collaborative Filtering", "Content-Based Filtering"],
+            },
+            {
+              day: 16,
+              title: "Explainable AI",
+              topics: ["SHAP", "LIME"],
+            },
+            {
+              day: 17,
+              title: "Federated Learning",
+              topics: ["Privacy", "Security"],
+            },
+            {
+              day: 18,
+              title: "MLOps",
+              topics: ["CI/CD", "Model Monitoring"],
+            },
+            {
+              day: 19,
+              title: "Edge Computing",
+              topics: ["Deployment", "Optimization"],
+            },
+            {
+              day: 20,
+              title: "Research Paper Guidance",
+              topics: ["Topic Selection", "Methodology"],
+            },
+            {
+              day: 21,
+              title: "Advanced MLOps",
+              topics: ["Kubeflow", "MLflow"],
+            },
+            {
+              day: 22,
+              title: "Cloud Deployment",
+              topics: ["AWS", "Azure", "GCP"],
+            },
+            {
+              day: 23,
+              title: "Model Optimization",
+              topics: ["Quantization", "Pruning"],
+            },
+            {
+              day: 24,
+              title: "Data Engineering",
+              topics: ["Spark", "Hadoop"],
+            },
+            {
+              day: 25,
+              title: "Big Data",
+              topics: ["Data Lakes", "Data Warehouses"],
+            },
+            {
+              day: 26,
+              title: "Ethics in AI",
+              topics: ["Bias", "Fairness"],
+            },
+            {
+              day: 27,
+              title: "AI for Social Good",
+              topics: ["Healthcare", "Education"],
+            },
+            {
+              day: 28,
+              title: "AI for Business",
+              topics: ["Marketing", "Sales"],
+            },
+            {
+              day: 29,
+              title: "AI for Finance",
+              topics: ["Trading", "Risk Management"],
+            },
+            {
+              day: 30,
+              title: "Final Project",
+              topics: ["End-to-End Project"],
+            },
           ],
         },
       },
@@ -293,38 +1003,6 @@ export default function HomePage() {
       icon: Globe,
       color: "from-yellow-500 to-orange-500",
       hot: true,
-      curriculum: [
-        {
-          day: 1,
-          title: "Blockchain & Ethereum Basics",
-          topics: ["Blockchain fundamentals", "Ethereum network", "MetaMask setup", "Gas & transactions"],
-        },
-        {
-          day: 2,
-          title: "Solidity Programming",
-          topics: ["Solidity syntax", "Smart contract structure", "Data types", "Functions & modifiers"],
-        },
-        {
-          day: 3,
-          title: "Smart Contract Development",
-          topics: ["Contract deployment", "Remix IDE", "Testing contracts", "Security basics"],
-        },
-        {
-          day: 4,
-          title: "Token Development",
-          topics: ["ERC-20 tokens", "Token creation", "Token functions", "Deployment to testnet"],
-        },
-        {
-          day: 5,
-          title: "Web3 Frontend Integration",
-          topics: ["Web3.js basics", "Frontend connection", "Transaction handling", "User interface"],
-        },
-        {
-          day: 6,
-          title: "DApp Project",
-          topics: ["Complete DApp build", "Smart contract + Frontend", "Testing & debugging", "Production deployment"],
-        },
-      ],
       packages: {
         mini: {
           price: "4.490.000",
@@ -335,7 +1013,44 @@ export default function HomePage() {
             "6 buổi học thực chiến qua Zoom",
             "Xây dựng 1 DApp hoàn chỉnh",
             "Solidity, Ethereum, Web3.js",
-            "Mentor 1:1 từ Blockchain Developer",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Blockchain & Ethereum Basics",
+              topics: ["Blockchain fundamentals", "Ethereum network", "MetaMask setup", "Gas & transactions"],
+            },
+            {
+              day: 2,
+              title: "Solidity Programming",
+              topics: ["Solidity syntax", "Smart contract structure", "Data types", "Functions & modifiers"],
+            },
+            {
+              day: 3,
+              title: "Smart Contract Development",
+              topics: ["Contract deployment", "Remix IDE", "Testing contracts", "Security basics"],
+            },
+            {
+              day: 4,
+              title: "Token Development",
+              topics: ["ERC-20 tokens", "Token creation", "Token functions", "Deployment to testnet"],
+            },
+            {
+              day: 5,
+              title: "Web3 Frontend Integration",
+              topics: ["Web3.js basics", "Frontend connection", "Transaction handling", "User interface"],
+            },
+            {
+              day: 6,
+              title: "DApp Project",
+              topics: [
+                "Complete DApp build",
+                "Smart contract + Frontend",
+                "Testing & debugging",
+                "Production deployment",
+              ],
+            },
           ],
         },
         advance: {
@@ -346,8 +1061,90 @@ export default function HomePage() {
           benefits: [
             "15 buổi học chuyên sâu qua Zoom",
             "Advanced Smart Contracts, DeFi",
-            "Mentor 1:1 từ Blockchain Architect",
-            "Cam kết thực tập tại công ty Blockchain",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
+            "Cam kết thực tập tại công ty công nghệ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Blockchain & Ethereum Basics",
+              topics: ["Blockchain fundamentals", "Ethereum network", "MetaMask setup", "Gas & transactions"],
+            },
+            {
+              day: 2,
+              title: "Solidity Programming",
+              topics: ["Solidity syntax", "Smart contract structure", "Data types", "Functions & modifiers"],
+            },
+            {
+              day: 3,
+              title: "Smart Contract Development",
+              topics: ["Contract deployment", "Remix IDE", "Testing contracts", "Security basics"],
+            },
+            {
+              day: 4,
+              title: "Token Development",
+              topics: ["ERC-20 tokens", "Token creation", "Token functions", "Deployment to testnet"],
+            },
+            {
+              day: 5,
+              title: "Web3 Frontend Integration",
+              topics: ["Web3.js basics", "Frontend connection", "Transaction handling", "User interface"],
+            },
+            {
+              day: 6,
+              title: "DApp Project",
+              topics: [
+                "Complete DApp build",
+                "Smart contract + Frontend",
+                "Testing & debugging",
+                "Production deployment",
+              ],
+            },
+            {
+              day: 7,
+              title: "Advanced Solidity",
+              topics: ["Design Patterns", "Gas Optimization"],
+            },
+            {
+              day: 8,
+              title: "DeFi Protocols",
+              topics: ["Lending", "Borrowing"],
+            },
+            {
+              day: 9,
+              title: "Security Audits",
+              topics: ["Vulnerabilities", "Best Practices"],
+            },
+            {
+              day: 10,
+              title: "Layer 2 Scaling",
+              topics: ["Rollups", "Sidechains"],
+            },
+            {
+              day: 11,
+              title: "Cross-Chain Interoperability",
+              topics: ["Bridges", "Atomic Swaps"],
+            },
+            {
+              day: 12,
+              title: "DAO Governance",
+              topics: ["Voting", "Proposals"],
+            },
+            {
+              day: 13,
+              title: "NFTs",
+              topics: ["ERC-721", "ERC-1155"],
+            },
+            {
+              day: 14,
+              title: "IPFS",
+              topics: ["Decentralized Storage"],
+            },
+            {
+              day: 15,
+              title: "Final Project",
+              topics: ["Advanced DApp"],
+            },
           ],
         },
         combo: {
@@ -359,7 +1156,140 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "NFT Marketplace development",
             "Tokenomics & ICO guidance",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 3.510.000đ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "Blockchain & Ethereum Basics",
+              topics: ["Blockchain fundamentals", "Ethereum network", "MetaMask setup", "Gas & transactions"],
+            },
+            {
+              day: 2,
+              title: "Solidity Programming",
+              topics: ["Solidity syntax", "Smart contract structure", "Data types", "Functions & modifiers"],
+            },
+            {
+              day: 3,
+              title: "Smart Contract Development",
+              topics: ["Contract deployment", "Remix IDE", "Testing contracts", "Security basics"],
+            },
+            {
+              day: 4,
+              title: "Token Development",
+              topics: ["ERC-20 tokens", "Token creation", "Token functions", "Deployment to testnet"],
+            },
+            {
+              day: 5,
+              title: "Web3 Frontend Integration",
+              topics: ["Web3.js basics", "Frontend connection", "Transaction handling", "User interface"],
+            },
+            {
+              day: 6,
+              title: "DApp Project",
+              topics: [
+                "Complete DApp build",
+                "Smart contract + Frontend",
+                "Testing & debugging",
+                "Production deployment",
+              ],
+            },
+            {
+              day: 7,
+              title: "Advanced Solidity",
+              topics: ["Design Patterns", "Gas Optimization"],
+            },
+            {
+              day: 8,
+              title: "DeFi Protocols",
+              topics: ["Lending", "Borrowing"],
+            },
+            {
+              day: 9,
+              title: "Security Audits",
+              topics: ["Vulnerabilities", "Best Practices"],
+            },
+            {
+              day: 10,
+              title: "Layer 2 Scaling",
+              topics: ["Rollups", "Sidechains"],
+            },
+            {
+              day: 11,
+              title: "Cross-Chain Interoperability",
+              topics: ["Bridges", "Atomic Swaps"],
+            },
+            {
+              day: 12,
+              title: "DAO Governance",
+              topics: ["Voting", "Proposals"],
+            },
+            {
+              day: 13,
+              title: "NFTs",
+              topics: ["ERC-721", "ERC-1155"],
+            },
+            {
+              day: 14,
+              title: "IPFS",
+              topics: ["Decentralized Storage"],
+            },
+            {
+              day: 15,
+              title: "Final Project",
+              topics: ["Advanced DApp"],
+            },
+            {
+              day: 16,
+              title: "NFT Marketplace",
+              topics: ["Smart Contracts", "Frontend"],
+            },
+            {
+              day: 17,
+              title: "Tokenomics",
+              topics: ["Supply", "Distribution"],
+            },
+            {
+              day: 18,
+              title: "ICO",
+              topics: ["Launch", "Marketing"],
+            },
+            {
+              day: 19,
+              title: "Security",
+              topics: ["Audits", "Best Practices"],
+            },
+            {
+              day: 20,
+              title: "Legal",
+              topics: ["Compliance", "Regulations"],
+            },
+            {
+              day: 21,
+              title: "Community",
+              topics: ["Building", "Engagement"],
+            },
+            {
+              day: 22,
+              title: "Marketing",
+              topics: ["Social Media", "Content"],
+            },
+            {
+              day: 23,
+              title: "Growth",
+              topics: ["Strategies", "Metrics"],
+            },
+            {
+              day: 24,
+              title: "Scaling",
+              topics: ["Solutions", "Optimization"],
+            },
+            {
+              day: 25,
+              title: "Final Project",
+              topics: ["NFT Marketplace"],
+            },
           ],
         },
       },
@@ -370,48 +1300,6 @@ export default function HomePage() {
       description: "React, Vue, Angular, HTML/CSS",
       icon: Monitor,
       color: "from-blue-500 to-cyan-500",
-      curriculum: [
-        {
-          day: 1,
-          title: "HTML/CSS Mastery",
-          topics: ["Semantic HTML", "CSS Grid/Flexbox", "Responsive design", "CSS animations"],
-        },
-        {
-          day: 2,
-          title: "JavaScript Essentials",
-          topics: ["ES6+ features", "DOM manipulation", "Event handling", "Async programming"],
-        },
-        {
-          day: 3,
-          title: "React Fundamentals",
-          topics: ["Components & JSX", "State & Props", "Hooks", "Event handling"],
-        },
-        {
-          day: 4,
-          title: "React Advanced",
-          topics: ["State management", "Context API", "Custom hooks", "Performance optimization"],
-        },
-        {
-          day: 5,
-          title: "API Integration",
-          topics: ["Fetch API", "Axios", "Error handling", "Loading states"],
-        },
-        {
-          day: 6,
-          title: "Routing & Navigation",
-          topics: ["React Router", "Dynamic routing", "Protected routes", "Navigation patterns"],
-        },
-        {
-          day: 7,
-          title: "UI/UX Implementation",
-          topics: ["CSS frameworks", "Component libraries", "Responsive design", "Accessibility"],
-        },
-        {
-          day: 8,
-          title: "Portfolio Project",
-          topics: ["Personal portfolio", "Project showcase", "Deployment", "Performance optimization"],
-        },
-      ],
       packages: {
         mini: {
           price: "2.490.000",
@@ -422,7 +1310,49 @@ export default function HomePage() {
             "8 buổi học thực chiến qua Zoom",
             "Xây dựng 1 portfolio website",
             "React, HTML/CSS, JavaScript",
-            "Mentor 1:1 hỗ trợ project",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "HTML/CSS Mastery",
+              topics: ["Semantic HTML", "CSS Grid/Flexbox", "Responsive design", "CSS animations"],
+            },
+            {
+              day: 2,
+              title: "JavaScript Essentials",
+              topics: ["ES6+ features", "DOM manipulation", "Event handling", "Async programming"],
+            },
+            {
+              day: 3,
+              title: "React Fundamentals",
+              topics: ["Components & JSX", "State & Props", "Hooks", "Event handling"],
+            },
+            {
+              day: 4,
+              title: "React Advanced",
+              topics: ["State management", "Context API", "Custom hooks", "Performance optimization"],
+            },
+            {
+              day: 5,
+              title: "API Integration",
+              topics: ["Fetch API", "Axios", "Error handling", "Loading states"],
+            },
+            {
+              day: 6,
+              title: "Routing & Navigation",
+              topics: ["React Router", "Dynamic routing", "Protected routes", "Navigation patterns"],
+            },
+            {
+              day: 7,
+              title: "UI/UX Implementation",
+              topics: ["CSS frameworks", "Component libraries", "Responsive design", "Accessibility"],
+            },
+            {
+              day: 8,
+              title: "Portfolio Project",
+              topics: ["Personal portfolio", "Project showcase", "Deployment", "Performance optimization"],
+            },
           ],
         },
         advance: {
@@ -433,8 +1363,90 @@ export default function HomePage() {
           benefits: [
             "16 buổi học chuyên sâu qua Zoom",
             "Advanced React/Next.js",
-            "Mentor 1:1 hỗ trợ tận tình",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
             "Cam kết thực tập tại công ty công nghệ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "HTML/CSS Mastery",
+              topics: ["Semantic HTML", "CSS Grid/Flexbox", "Responsive design", "CSS animations"],
+            },
+            {
+              day: 2,
+              title: "JavaScript Essentials",
+              topics: ["ES6+ features", "DOM manipulation", "Event handling", "Async programming"],
+            },
+            {
+              day: 3,
+              title: "React Fundamentals",
+              topics: ["Components & JSX", "State & Props", "Hooks", "Event handling"],
+            },
+            {
+              day: 4,
+              title: "React Advanced",
+              topics: ["State management", "Context API", "Custom hooks", "Performance optimization"],
+            },
+            {
+              day: 5,
+              title: "API Integration",
+              topics: ["Fetch API", "Axios", "Error handling", "Loading states"],
+            },
+            {
+              day: 6,
+              title: "Routing & Navigation",
+              topics: ["React Router", "Dynamic routing", "Protected routes", "Navigation patterns"],
+            },
+            {
+              day: 7,
+              title: "UI/UX Implementation",
+              topics: ["CSS frameworks", "Component libraries", "Responsive design", "Accessibility"],
+            },
+            {
+              day: 8,
+              title: "Portfolio Project",
+              topics: ["Personal portfolio", "Project showcase", "Deployment", "Performance optimization"],
+            },
+            {
+              day: 9,
+              title: "Next.js",
+              topics: ["SSR", "SEO"],
+            },
+            {
+              day: 10,
+              title: "GraphQL",
+              topics: ["Queries", "Mutations"],
+            },
+            {
+              day: 11,
+              title: "Testing",
+              topics: ["Unit", "Integration"],
+            },
+            {
+              day: 12,
+              title: "Deployment",
+              topics: ["Vercel", "Netlify"],
+            },
+            {
+              day: 13,
+              title: "Performance",
+              topics: ["Optimization", "Profiling"],
+            },
+            {
+              day: 14,
+              title: "Security",
+              topics: ["Best Practices"],
+            },
+            {
+              day: 15,
+              title: "Accessibility",
+              topics: ["ARIA", "WCAG"],
+            },
+            {
+              day: 16,
+              title: "Final Project",
+              topics: ["Advanced Portfolio"],
+            },
           ],
         },
         combo: {
@@ -446,7 +1458,140 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "Hỗ trợ tìm việc sau khóa học",
             "Portfolio cá nhân chuyên nghiệp",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 2.210.000đ",
+          ],
+          curriculum: [
+            {
+              day: 1,
+              title: "HTML/CSS Mastery",
+              topics: ["Semantic HTML", "CSS Grid/Flexbox", "Responsive design", "CSS animations"],
+            },
+            {
+              day: 2,
+              title: "JavaScript Essentials",
+              topics: ["ES6+ features", "DOM manipulation", "Event handling", "Async programming"],
+            },
+            {
+              day: 3,
+              title: "React Fundamentals",
+              topics: ["Components & JSX", "State & Props", "Hooks", "Event handling"],
+            },
+            {
+              day: 4,
+              title: "React Advanced",
+              topics: ["State management", "Context API", "Custom hooks", "Performance optimization"],
+            },
+            {
+              day: 5,
+              title: "API Integration",
+              topics: ["Fetch API", "Axios", "Error handling", "Loading states"],
+            },
+            {
+              day: 6,
+              title: "Routing & Navigation",
+              topics: ["React Router", "Dynamic routing", "Protected routes", "Navigation patterns"],
+            },
+            {
+              day: 7,
+              title: "UI/UX Implementation",
+              topics: ["CSS frameworks", "Component libraries", "Responsive design", "Accessibility"],
+            },
+            {
+              day: 8,
+              title: "Portfolio Project",
+              topics: ["Personal portfolio", "Project showcase", "Deployment", "Performance optimization"],
+            },
+            {
+              day: 9,
+              title: "Next.js",
+              topics: ["SSR", "SEO"],
+            },
+            {
+              day: 10,
+              title: "GraphQL",
+              topics: ["Queries", "Mutations"],
+            },
+            {
+              day: 11,
+              title: "Testing",
+              topics: ["Unit", "Integration"],
+            },
+            {
+              day: 12,
+              title: "Deployment",
+              topics: ["Vercel", "Netlify"],
+            },
+            {
+              day: 13,
+              title: "Performance",
+              topics: ["Optimization", "Profiling"],
+            },
+            {
+              day: 14,
+              title: "Security",
+              topics: ["Best Practices"],
+            },
+            {
+              day: 15,
+              title: "Accessibility",
+              topics: ["ARIA", "WCAG"],
+            },
+            {
+              day: 16,
+              title: "Final Project",
+              topics: ["Advanced Portfolio"],
+            },
+            {
+              day: 17,
+              title: "Job Search",
+              topics: ["Strategies", "Networking"],
+            },
+            {
+              day: 18,
+              title: "Resume Building",
+              topics: ["Tips", "Templates"],
+            },
+            {
+              day: 19,
+              title: "Interview Skills",
+              topics: ["Technical", "Behavioral"],
+            },
+            {
+              day: 20,
+              title: "Freelancing",
+              topics: ["Platforms", "Tips"],
+            },
+            {
+              day: 21,
+              title: "Open Source",
+              topics: ["Contribution", "Projects"],
+            },
+            {
+              day: 22,
+              title: "Community",
+              topics: ["Engagement", "Networking"],
+            },
+            {
+              day: 23,
+              title: "Personal Branding",
+              topics: ["Online Presence"],
+            },
+            {
+              day: 24,
+              title: "Advanced CSS",
+              topics: ["Animations", "Transitions"],
+            },
+            {
+              day: 25,
+              title: "Advanced JavaScript",
+              topics: ["Design Patterns"],
+            },
+            {
+              day: 26,
+              title: "Final Portfolio Review",
+              topics: ["Feedback", "Improvements"],
+            },
           ],
         },
       },
@@ -509,7 +1654,7 @@ export default function HomePage() {
             "8 buổi học thực chiến qua Zoom",
             "Setup 1 pipeline CI/CD hoàn chỉnh",
             "Docker, K8s, AWS basics",
-            "Mentor 1:1 hỗ trợ project",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
           ],
         },
         advance: {
@@ -520,7 +1665,7 @@ export default function HomePage() {
           benefits: [
             "18 buổi học chuyên sâu qua Zoom",
             "AWS/Azure certification prep",
-            "Mentor 1:1 từ Senior DevOps",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
             "Cam kết thực tập tại startup công nghệ",
           ],
         },
@@ -533,6 +1678,7 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "Cloud architecture workshop",
             "Security & Monitoring best practices",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 3.310.000đ",
           ],
         },
@@ -586,7 +1732,7 @@ export default function HomePage() {
             "6 buổi học thực chiến qua Zoom",
             "Xây dựng 1 test plan hoàn chỉnh",
             "Manual + Automation testing",
-            "Mentor 1:1 hỗ trợ project",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
           ],
         },
         advance: {
@@ -598,7 +1744,7 @@ export default function HomePage() {
             "15 buổi học chuyên sâu qua Zoom",
             "Selenium/Cypress automation",
             "Mentor 1:1 từ Test Lead",
-            "Cam kết thực tập tại công ty outsourcing",
+            "Cơ hội thực tập tại công ty công nghệ",
           ],
         },
         combo: {
@@ -610,6 +1756,7 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "Performance testing với JMeter",
             "API testing chuyên sâu",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 1.810.000đ",
           ],
         },
@@ -668,7 +1815,7 @@ export default function HomePage() {
             "7 buổi học thực chiến qua Zoom",
             "Xây dựng 1 BRD project hoàn chỉnh",
             "BA fundamentals + Tools",
-            "Mentor 1:1 hỗ trợ project",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
           ],
         },
         advance: {
@@ -679,8 +1826,8 @@ export default function HomePage() {
           benefits: [
             "16 buổi học chuyên sâu qua Zoom",
             "Advanced BA techniques & tools",
-            "Mentor 1:1 từ Senior BA",
-            "Cam kết thực tập tại công ty consulting",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
+            "Cơ hội thực tập tại công ty công nghệ",
           ],
         },
         combo: {
@@ -692,6 +1839,7 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "Agile certification prep",
             "BA portfolio development",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 2.410.000đ",
           ],
         },
@@ -755,7 +1903,7 @@ export default function HomePage() {
             "8 buổi học thực chiến qua Zoom",
             "Xây dựng 1 project plan hoàn chỉnh",
             "PM fundamentals + Tools",
-            "Mentor 1:1 hỗ trợ project",
+            "Mentor 1:1 hỗ trợ bài tập lớn",
           ],
         },
         advance: {
@@ -766,8 +1914,8 @@ export default function HomePage() {
           benefits: [
             "18 buổi học chuyên sâu qua Zoom",
             "Advanced PM techniques & leadership",
-            "Mentor 1:1 từ Senior PM",
-            "Cam kết thực tập tại công ty IT",
+            "Mentor 1:1 hỗ trợ đồ án tốt nghiệp",
+            "Cơ hội thực tập tại công ty công nghệ",
           ],
         },
         combo: {
@@ -779,6 +1927,7 @@ export default function HomePage() {
             "Toàn bộ quyền lợi Mini + Advance",
             "PMP certification prep",
             "Leadership workshop",
+            "Xác thực thực tập có dấu đỏ",
             "Tiết kiệm 2.710.000đ",
           ],
         },
@@ -788,8 +1937,9 @@ export default function HomePage() {
 
   const [selectedCourse, setSelectedCourse] = useState(courses[0])
 
-  const openCurriculum = (course) => {
+  const openCurriculum = (course, packageType = "mini") => {
     setSelectedCourseForCurriculum(course)
+    setSelectedPackage(packageType)
     setShowCurriculum(true)
   }
 
@@ -972,14 +2122,14 @@ export default function HomePage() {
                 {selectedCourse.packages.mini.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className={index === 1 ? "font-semibold text-blue-600" : ""}>{benefit}</span>
+                    <span className={index === 3 ? "font-semibold text-blue-600" : ""}>{benefit}</span>
                   </div>
                 ))}
                 <div className="flex gap-2 mt-6">
                   <Button
                     variant="outline"
                     className="flex-1 bg-transparent"
-                    onClick={() => openCurriculum(selectedCourse)}
+                    onClick={() => openCurriculum(selectedCourse, "mini")}
                   >
                     Xem chi tiết
                   </Button>
@@ -1019,7 +2169,7 @@ export default function HomePage() {
                   <Button
                     variant="outline"
                     className="flex-1 bg-transparent"
-                    onClick={() => openCurriculum(selectedCourse)}
+                    onClick={() => openCurriculum(selectedCourse, "advance")}
                   >
                     Xem chi tiết
                   </Button>
@@ -1050,14 +2200,14 @@ export default function HomePage() {
                 {selectedCourse.packages.combo.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className={index === 3 ? "font-semibold text-purple-600" : ""}>{benefit}</span>
+                    <span className={index === 4 ? "font-semibold text-purple-600" : ""}>{benefit}</span>
                   </div>
                 ))}
                 <div className="flex gap-2 mt-6">
                   <Button
                     variant="outline"
                     className="flex-1 bg-transparent"
-                    onClick={() => openCurriculum(selectedCourse)}
+                    onClick={() => openCurriculum(selectedCourse, "combo")}
                   >
                     Xem chi tiết
                   </Button>
@@ -1547,7 +2697,7 @@ export default function HomePage() {
               </div>
 
               <div className="grid gap-4">
-                {selectedCourseForCurriculum.curriculum?.map((day, index) => (
+                {selectedCourseForCurriculum.packages[selectedPackage].curriculum?.map((day, index) => (
                   <Card key={index} className="hover:shadow-md transition-shadow">
                     <CardHeader className="pb-3">
                       <div className="flex items-center justify-between">
